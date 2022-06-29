@@ -1,6 +1,7 @@
 package com.vti.utils;
 
 import com.vti.entity.Group;
+import com.vti.entity.Order;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -35,6 +36,7 @@ public class HibernateUtils {
         // add entity
         configuration.addAnnotatedClass(Department.class);
         configuration.addAnnotatedClass(Group.class);
+        configuration.addAnnotatedClass(Order.class);
     }
 
     private SessionFactory buildSessionFactory() {
