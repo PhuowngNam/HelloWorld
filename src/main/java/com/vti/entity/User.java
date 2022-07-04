@@ -26,19 +26,15 @@ public class User implements Serializable {
     @Column(name = "username", nullable = false, unique = true)
     private String username;
 
-    @ManyToMany
-    @JoinTable(
-        name = "user_address",
-        joinColumns = {@JoinColumn(name = "user_id")},
-        inverseJoinColumns = {@JoinColumn(name = "address_id")})
-    private List<Address> addressList;
+    @OneToMany(mappedBy = "user")
+    private List<UserAddress> userAddressList;
 
     @Override
     public String toString() {
         return "User{" +
             "id=" + id +
             ", username='" + username + '\'' +
-            ", addressList=" + addressList +
+            ", userAddressList=" + userAddressList +
             '}';
     }
 
@@ -61,11 +57,11 @@ public class User implements Serializable {
         this.username = username;
     }
 
-    public List<Address> getAddressList() {
-        return addressList;
+    public List<UserAddress> getUserAddressList() {
+        return userAddressList;
     }
 
-    public void setAddressList(List<Address> addressList) {
-        this.addressList = addressList;
+    public void setUserAddressList(List<UserAddress> userAddressList) {
+        this.userAddressList = userAddressList;
     }
 }

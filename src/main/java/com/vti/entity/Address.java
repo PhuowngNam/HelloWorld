@@ -26,8 +26,8 @@ public class Address implements Serializable {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @ManyToMany(mappedBy = "addressList")
-    private List<User> userList;
+    @OneToMany(mappedBy = "address")
+    private List<UserAddress> userAddressList;
 
     @Override
     public String toString() {
@@ -55,11 +55,11 @@ public class Address implements Serializable {
         this.name = name;
     }
 
-    public List<User> getUserList() {
-        return userList;
+    public List<UserAddress> getUserAddressList() {
+        return userAddressList;
     }
 
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
+    public void setUserAddressList(List<UserAddress> userAddressList) {
+        this.userAddressList = userAddressList;
     }
 }

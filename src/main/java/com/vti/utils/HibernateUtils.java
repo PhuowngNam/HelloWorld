@@ -4,6 +4,7 @@ import com.vti.entity.Address;
 import com.vti.entity.Group;
 import com.vti.entity.Order;
 import com.vti.entity.User;
+import com.vti.entity.UserAddress;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -41,6 +42,7 @@ public class HibernateUtils {
         configuration.addAnnotatedClass(Order.class);
         configuration.addAnnotatedClass(User.class);
         configuration.addAnnotatedClass(Address.class);
+        configuration.addAnnotatedClass(UserAddress.class);
     }
 
     private SessionFactory buildSessionFactory() {
