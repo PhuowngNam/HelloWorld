@@ -1,9 +1,14 @@
 package com.vti.entity;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -19,15 +24,15 @@ public class Address implements Serializable {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @OneToOne(mappedBy = "address")
-    private User user;
+    @OneToMany(mappedBy = "address")
+    private List<User> userList;
 
     @Override
     public String toString() {
         return "Address{" +
             "id=" + id +
             ", name='" + name + '\'' +
-            ", user=" + user +
+            ", userList=" + userList +
             '}';
     }
 
@@ -47,11 +52,11 @@ public class Address implements Serializable {
         this.name = name;
     }
 
-    public User getUser() {
-        return user;
+    public List<User> getUserList() {
+        return userList;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
     }
 }

@@ -6,7 +6,9 @@ import com.vti.entity.enumtype.DepartmentLevel;
 import com.vti.entity.enumtype.DepartmentSize;
 import com.vti.entity.enumtype.DepartmentStatus;
 import com.vti.entity.multiPK.OrderPK;
+import com.vti.repo.AddressRepo;
 import com.vti.repo.DepartmentRepo;
+import com.vti.repo.IAddressRepo;
 import com.vti.repo.IUserRepo;
 import com.vti.repo.OrderRepo;
 import com.vti.repo.UserRepo;
@@ -64,9 +66,13 @@ public class TestProgram {
 
 
 		//test one to one
-		IUserRepo userRepo = new UserRepo();
-		System.out.println("all user");
-		userRepo.getAll().forEach(System.out::println);
+//		IUserRepo userRepo = new UserRepo();
+//		System.out.println("all user");
+//		userRepo.getAll().forEach(System.out::println);
 
+
+		//test one to many: 1 address co nhieu user
+		IAddressRepo addressRepo = new AddressRepo();
+		addressRepo.getAll().forEach(System.out::println);
 	}
 }

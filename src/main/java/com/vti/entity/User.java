@@ -1,10 +1,13 @@
 package com.vti.entity;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -21,8 +24,8 @@ public class User implements Serializable {
     @Column(name = "username", nullable = false, unique = true)
     private String username;
 
-    @OneToOne
-    @JoinColumn(name = "address_id", referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name = "address_id")
     private Address address;
 
     @Override
@@ -51,13 +54,5 @@ public class User implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
     }
 }
