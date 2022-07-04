@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f0c618c-0ce7-43db-894e-97cc2bcd00d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/repo/AddressRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/repo/IAddressRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorld.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorld.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vti/TestProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vti/TestProgram.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vti/entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vti/entity/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vti/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vti/entity/User.java" afterDir="false" />

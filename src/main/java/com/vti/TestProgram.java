@@ -2,6 +2,7 @@ package com.vti;
 
 import com.vti.entity.Department;
 import com.vti.entity.Order;
+import com.vti.entity.User;
 import com.vti.entity.enumtype.DepartmentLevel;
 import com.vti.entity.enumtype.DepartmentSize;
 import com.vti.entity.enumtype.DepartmentStatus;
@@ -12,6 +13,7 @@ import com.vti.repo.IAddressRepo;
 import com.vti.repo.IUserRepo;
 import com.vti.repo.OrderRepo;
 import com.vti.repo.UserRepo;
+import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -72,7 +74,12 @@ public class TestProgram {
 
 
 		//test one to many: 1 address co nhieu user
-		IAddressRepo addressRepo = new AddressRepo();
-		addressRepo.getAll().forEach(System.out::println);
+//		IAddressRepo addressRepo = new AddressRepo();
+//		addressRepo.getAll().forEach(System.out::println);
+
+		// test many to many
+		IUserRepo userRepo = new UserRepo();
+		List<User> userList = userRepo.getAll();
+		userList.forEach(System.out::println);
 	}
 }

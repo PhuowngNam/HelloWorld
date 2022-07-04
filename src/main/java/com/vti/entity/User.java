@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -24,16 +26,19 @@ public class User implements Serializable {
     @Column(name = "username", nullable = false, unique = true)
     private String username;
 
-    @ManyToOne
-    @JoinColumn(name = "address_id")
-    private Address address;
+    @ManyToMany
+    @JoinTable(
+        name = "user_address",
+        joinColumns = {@JoinColumn(name = "user_id")},
+        inverseJoinColumns = {@JoinColumn(name = "address_id")})
+    private List<Address> addressList;
 
     @Override
     public String toString() {
         return "User{" +
             "id=" + id +
             ", username='" + username + '\'' +
-            ", address=" + address.getName() +
+            ", addressList=" + addressList +
             '}';
     }
 
@@ -54,5 +59,13 @@ public class User implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public List<Address> getAddressList() {
+        return addressList;
+    }
+
+    public void setAddressList(List<Address> addressList) {
+        this.addressList = addressList;
     }
 }
