@@ -7,7 +7,9 @@ import com.vti.entity.enumtype.DepartmentSize;
 import com.vti.entity.enumtype.DepartmentStatus;
 import com.vti.entity.multiPK.OrderPK;
 import com.vti.repo.DepartmentRepo;
+import com.vti.repo.IUserRepo;
 import com.vti.repo.OrderRepo;
+import com.vti.repo.UserRepo;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -51,13 +53,20 @@ public class TestProgram {
 
 		//cách 2
 
-		OrderRepo orderRepo = new OrderRepo();
-		// create order
-		Order order = new Order();
-		order.setCustomerId(2);
-		order.setProductId(2);
-		order.setTotalMoney(1000.0);
+//		OrderRepo orderRepo = new OrderRepo();
+//		// create order
+//		Order order = new Order();
+//		order.setCustomerId(2);
+//		order.setProductId(2);
+//		order.setTotalMoney(1000.0);
+//
+//		orderRepo.create(order);
 
-		orderRepo.create(order);
+
+		//test one to one
+		IUserRepo userRepo = new UserRepo();
+		System.out.println("all user");
+		userRepo.getAll().forEach(System.out::println);
+
 	}
 }

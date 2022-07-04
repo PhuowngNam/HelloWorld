@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f0c618c-0ce7-43db-894e-97cc2bcd00d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/entity/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/entity/converterenum/DepartmentSizeConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/entity/enumtype/DepartmentLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/entity/enumtype/DepartmentSize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/entity/enumtype/DepartmentStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/entity/multiPK/OrderPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/repo/IOrderRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/repo/OrderRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/entity/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/repo/IUserRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vti/repo/UserRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vti/TestProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vti/TestProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vti/entity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vti/entity/Department.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vti/utils/HibernateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vti/utils/HibernateUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vti/TestProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vti/TestProgram.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vti/entity/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vti/entity/Department.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vti/utils/HibernateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vti/utils/HibernateUtils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="module-info" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -56,6 +48,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
@@ -77,15 +70,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,7 +98,8 @@
       <workItem from="1656335039928" duration="729000" />
       <workItem from="1656336181833" duration="242000" />
       <workItem from="1656336440561" duration="7093000" />
-      <workItem from="1656505241386" duration="8531000" />
+      <workItem from="1656505241386" duration="9381000" />
+      <workItem from="1656938298353" duration="2048000" />
     </task>
     <servers />
   </component>
@@ -124,8 +116,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HelloWorld$TestProgram.ic" NAME="TestProgram Coverage Results" MODIFIED="1656939636333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.vti.*</FILTER>
+    </SUITE>
   </component>
 </project>
