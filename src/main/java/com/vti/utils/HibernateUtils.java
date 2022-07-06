@@ -1,10 +1,14 @@
 package com.vti.utils;
 
 import com.vti.entity.Address;
+import com.vti.entity.ContractEmployee;
+import com.vti.entity.Employee;
 import com.vti.entity.Group;
 import com.vti.entity.Order;
+import com.vti.entity.RegularEmployee;
 import com.vti.entity.User;
 import com.vti.entity.UserAddress;
+import com.vti.repo.RegularEmployeeRepo;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -43,6 +47,9 @@ public class HibernateUtils {
         configuration.addAnnotatedClass(User.class);
         configuration.addAnnotatedClass(Address.class);
         configuration.addAnnotatedClass(UserAddress.class);
+        configuration.addAnnotatedClass(Employee.class);
+        configuration.addAnnotatedClass(RegularEmployee.class);
+        configuration.addAnnotatedClass(ContractEmployee.class);
     }
 
     private SessionFactory buildSessionFactory() {
